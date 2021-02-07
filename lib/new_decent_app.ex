@@ -1,18 +1,7 @@
 defmodule NewDecentApp do
-  @moduledoc """
-  Documentation for `NewDecentApp`.
-  """
+  alias Balance.Core
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> NewDecentApp.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def call(balance, commands) do
+    Core.create_balance(balance, commands)
   end
 end
